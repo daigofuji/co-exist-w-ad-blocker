@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>How to co-exist with ad blockers
-
-</title>
+    <title>How to co-exist with ad blockers</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,200,300,700|Ubuntu+Mono:400,700,400italic">
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
@@ -30,7 +28,7 @@ class: center, middle, inverse
 
 ---
 class: center, middle, white, big-img
-How about *MONEY*
+How about *MONEY*?
 <img src="img/erlich.gif" alt="" width="1200">
 
 ---
@@ -100,11 +98,12 @@ class: center, middle, white
 
 # *document.write*
 
+.small[http://stackoverflow.com/questions/802854/why-is-document-write-considered-a-bad-practice]
 ---
 class: center, middle, inverse
 
 
-# Enter Ad Blocker
+# Enter **Ad Blockers**
 
 ---
 class: center, middle, white
@@ -112,16 +111,15 @@ class: center, middle, white
 
 # State of Ad Blocking 
 
-2016 Reuters Digital News report finds **"24% of news consumers in U.S. block ads"** -- June 16, 2016
+2016 Reuters Digital News report: **"24% of news consumers in U.S. block ads"** -- June 16, 2016
 
 .small[http://digiday.com/publishers/global-state-of-ad-blocking/]
 
 ---
 class: center, middle, white, big-img
 
-According to [sourcepoint](http://sourcepoint.com/comscore-and-sourcepoint-the-state-of-ad-blocking/), **1 in 10 U.S. surfers block ads**
+[sourcepoint](http://sourcepoint.com/comscore-and-sourcepoint-the-state-of-ad-blocking/) June 2015: **1 in 10 U.S. surfers block ads**
 ![img](img/1in10blockads.png)
-.small[June 2015 ]
 
 ---
 class: center, middle, inverse
@@ -148,7 +146,7 @@ class: center, middle, white
 ##uBlock Origin
 ![img](img/ublock.png)
 
-Open source https://github.com/gorhill/uBlock
+Open source, light weight. https://github.com/gorhill/uBlock
 
 ---
 class: center, middle, white
@@ -156,25 +154,27 @@ class: center, middle, white
 ##Ghostery
 ![img](img/ghostery.png)
 
-Tracking blocker https://www.ghostery.com/
+"Tracking" blocker https://www.ghostery.com/
 
 ---
 class: center, middle, white
 
-## White listing (“Acceptable Ads” program)? <br>
-## Collecting "tracker" data?<br>
-## Extra processing power usage
+## Sketchy part of ad blockers 
+* White listing ([“Acceptable Ads” program](https://adblockplus.org/en/about#monetization)) <br>
+* Collecting "tracker" data<br>
+* Extra processing-power usage
 
 ---
 class: center, middle, inverse
 
-## **True or false:** if you don't have third-party javascript on your site, you are safe from ad blockers
-
+## **True or false:** if you don't have third-party javascript on your site, you don;t have to worry about ad blockers
 
 ---
 class: center, middle, white
 
 # <a href="demo-css.html" target="_blank">CSS Demo</a>
+
+[source code on github](https://github.com/daigofuji/co-exist-w-ad-blocker/blob/gh-pages/demo-css.html)
 
 ---
 class: middle, white
@@ -190,13 +190,15 @@ class: middle, white
    { display:none !important; }
 ```
 
-Example CSS Override from uBlok Origin
-
+Example CSS Override from uBlok Origin. 
 
 ---
 class: center, middle, white
 
 # <a href="demo-js.html" target="_blank">Javascript Demo</a>
+
+[source code on github](https://github.com/daigofuji/co-exist-w-ad-blocker/blob/gh-pages/demo-js.html)
+
 
 ---
 class: center, middle, inverse
@@ -233,7 +235,7 @@ class: center, middle, white
 #**DetectAdBlock.com**
 http://www.detectadblock.com/
 
-Tutorial on how to test by loading "ads.js" 
+Tutorial on how to test by loading "ads.js" (used in my <a href="demo-js.html" target="_blank">JavaScript Demo</a>)
 
 ---
 class: center, middle, white
@@ -241,7 +243,9 @@ class: center, middle, white
 # **Heilmann method**
 https://www.christianheilmann.com/2015/12/25/detecting-adblock-without-an-extra-http-overhead/
 
-Check the ad styled div to see if it is `display: none`, by testing `test.offsetHeight === 0`
+Check the ad styled div to see if it is `display: none`, by testing `test.offsetHeight === 0` <a href="demo-test.html" target="_blank">Demo</a>
+
+[source code on github](https://github.com/daigofuji/co-exist-w-ad-blocker/blob/gh-pages/demo-test.html)
 
 ---
 class: center, middle, white
@@ -250,6 +254,7 @@ class: center, middle, white
 
 https://github.com/reek/anti-adblock-killer
 
+Which lists [all the ad block blocker](https://github.com/reek/anti-adblock-killer/blob/master/anti-adblock-killer-filters.txt)
 ---
 class: middle, white
 
@@ -257,7 +262,7 @@ class: middle, white
 ##In conclusion
 
 * Internet ads suck.
-* Ad blockers are here to stay.
+* Ads and ad blockers are here to stay.
 * Ad blockers are also business.
 * Learn to live with them.
 
