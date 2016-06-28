@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>How to co-exist with ad blockers
+
+</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,200,300,700|Ubuntu+Mono:400,700,400italic">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# Co-existing with<br>**ad blockers**
+
+.small[[@CASCADE BOS meetup](http://www.meetup.com/cascadebos/events/230067856/) | Tue., June 28, 2016]
+
+Daigo Fujiwara, .small[Web Developer, WBUR, http://wbur.org]
+
+@DaigoFuji
+
+---
+class: center, middle, inverse
+
+# Do you like <br>**Online Ads**?
+
+
+---
+class: center, middle, white, big-img
+How about *MONEY*
+<img src="img/erlich.gif" alt="" width="1200">
+
+---
+class: center, middle, white
+
+## According to IAB (Interactive Advertising Bureau) U.S. Internet Ad Revenues was **$59.6 Billion** in 2015
+
+.small[SOURCE: http://www.iab.com/insights/iab-internet-advertising-revenue-report-conducted-by-pricewaterhousecoopers-pwc-2/]
+
+---
+class: center, middle, white
+
+![img](img/adrevenue.png)
+
+---
+class: center, middle, inverse
+
+# Ads are annoying...
+
+Didn't have to go far -- following screenshots are from yesterday.<br>
+Disclaimer: Not picking on anyone, we've all been there!
+
+---
+class: center, middle, white, big-img
+
+NESN
+![img](img/nesn.png)
+
+---
+class: center, middle, white, big-img
+
+CBS Boston
+![img](img/cbsboston.png)
+
+---
+class: center, middle, white, big-img
+
+**TAKE OVER** on Boston.com
+![img](img/bostoncom.png)
+
+---
+class: center, middle, inverse
+
+## ...and under the hood, **the CODE...**
+
+
+---
+class: middle, white
+
+
+```
+<script type="text/javascript">
+   (function() {
+   var useSSL = 'https:' == document.location.protocol;
+   var src = (useSSL ? 'https:' : 'http:') +
+ '//www.googletagservices.com/tag/js/gpt.js';
+   document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+   })();
+</script>
+```
+.small[https://support.google.com/dfp_premium/answer/1638622?hl=en]
+
+
+---
+class: center, middle, white
+
+
+# *document.write*
+
+---
+class: center, middle, inverse
+
+
+# Enter Ad Blocker
+
+---
+class: center, middle, white
+
+
+# State of Ad Blocking 
+
+2016 Reuters Digital News report finds **"24% of news consumers in U.S. block ads"** -- June 16, 2016
+
+.small[http://digiday.com/publishers/global-state-of-ad-blocking/]
+
+---
+class: center, middle, white, big-img
+
+According to [sourcepoint](http://sourcepoint.com/comscore-and-sourcepoint-the-state-of-ad-blocking/), **1 in 10 U.S. surfers block ads**
+![img](img/1in10blockads.png)
+.small[June 2015 ]
+
+---
+class: center, middle, inverse
+
+# Popular blockers
+Browser extensions
+---
+class: center, middle, white
+
+##Adblock Plus
+![img](img/abp.png)
+
+https://adblockplus.org/
+---
+class: center, middle, white
+
+##TechCrunch: AdBlock Plus closes in on a billion downloads
+
+.small[https://techcrunch.com/2016/05/09/adblock-plus-closes-in-on-a-billion-downloads/]
+
+---
+class: center, middle, white
+
+##uBlock Origin
+![img](img/ublock.png)
+
+Open source https://github.com/gorhill/uBlock
+
+---
+class: center, middle, white
+
+##Ghostery
+![img](img/ghostery.png)
+
+Tracking blocker https://www.ghostery.com/
+
+---
+class: center, middle, white
+
+## White listing (“Acceptable Ads” program)? <br>
+## Collecting "tracker" data?<br>
+## Extra processing power usage
+
+---
+class: center, middle, inverse
+
+## **True or false:** if you don't have third-party javascript on your site, you are safe from ad blockers
+
+
+---
+class: center, middle, white
+
+# <a href="demo-css.html" target="_blank">CSS Demo</a>
+
+---
+class: middle, white
+
+```
+:root .adsbox,
+:root .ad-link,
+:root .ad-text,
+:root .ad-content,
+:root .ad-label,
+:root .ad-inner,
+:root .ad.super
+   { display:none !important; }
+```
+
+Example CSS Override from uBlok Origin
+
+
+---
+class: center, middle, white
+
+# <a href="demo-js.html" target="_blank">Javascript Demo</a>
+
+---
+class: center, middle, inverse
+
+# Where do they get that list?
+
+
+---
+class: center, middle, white
+
+#**EasyList**
+
+https://easylist.github.io/
+
+[easylist_general_hide.txt](https://github.com/easylist/easylist/blob/master/easylist/easylist_general_hide.txt)<br>
+[easylist_general_block.txt](https://github.com/easylist/easylist/blob/master/easylist/easylist_general_block.txt)
+
+---
+class: center, middle, inverse
+
+# Counter Tools
+
+---
+class: center, middle, white
+
+#**BlockAdBlock**
+https://github.com/sitexw/BlockAdBlock
+
+A.K.A. F*ckAdBlock, ready-to-use library
+
+---
+class: center, middle, white
+
+#**DetectAdBlock.com**
+http://www.detectadblock.com/
+
+Tutorial on how to test by loading "ads.js" 
+
+---
+class: center, middle, white
+
+# **Heilmann method**
+https://www.christianheilmann.com/2015/12/25/detecting-adblock-without-an-extra-http-overhead/
+
+Check the ad styled div to see if it is `display: none`, by testing `test.offsetHeight === 0`
+
+---
+class: center, middle, white
+
+## And then there are counter-counter tools
+
+https://github.com/reek/anti-adblock-killer
+
+---
+class: middle, white
+
+
+##In conclusion
+
+* Internet ads suck.
+* Ad blockers are here to stay.
+* Ad blockers are also business.
+* Learn to live with them.
+
+---
+class: center, middle, white, big-img
+
+![img](img/cascadebos.jpg)
+
+
+---
+class: middle, center, white, big-img
+<img src="img/erlich.gif" alt="" width="500">
+
+**Thank you!** <br>https://github.com/daigofuji/co-exist-w-ad-blocker
+
+@DaigoFuji on <i class="fa fa-twitter"></i> &amp; <i class="fa fa-github"></i>
+
+
+    </textarea>
+    <script src="js/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create({ ratio: "16:9" });
+    </script>
+  </body>
+</html>

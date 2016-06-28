@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://cdn.jsdelivr.net/foundation/6.2.3/foundation.min.css' rel='stylesheet' type='text/css'>
+    <style></style>
+</head>
+<body>
+  <h1>Ad Blocker Simple Test page</h1>
+    <div class="row">
+      <div class="column">
+    <div id="results" class="callout"></div>
+      </div>
+    </div>
+
+  <script>
+    var test = document.createElement('div');
+    test.innerHTML = '&nbsp;';
+    test.className = 'adsbox';
+    document.body.appendChild(test);
+    var results = document.getElementById('results');
+    if (test.offsetHeight === 0) {
+      results.className += ' alert';
+      results.innerHTML = 'You are using an Ad Block!';
+    } else {
+      results.className += ' success';
+      results.innerHTML = 'Thank you for not using Ad Block.';
+    }
+    test.remove();
+  </script>
+</body>
+</html>

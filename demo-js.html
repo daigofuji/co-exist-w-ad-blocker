@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://cdn.jsdelivr.net/foundation/6.2.3/foundation.min.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <h1>Ad Blocker Javascript example page</h1>
+
+    <div class="row">
+      <div class="column">
+        <p>Are you using ad block? Open console!</p>
+
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      var adsjs = false;
+      var adframejs = false;
+      var scriptjs = false;
+    </script>
+    <script type="text/javascript" src="js/ads.js"></script>
+    <script type="text/javascript" src="js/adframe.js"></script>
+    <script type="text/javascript" src="js/script.js?a=b&popunder=x"></script>
+
+    <script type="text/javascript">
+    console.log("Was ads.js loaded? :", adsjs);
+    console.log("Was adfreme.js loaded? :", adframejs);
+    console.log("Was scrit.js loaded? :", scriptjs);
+    </script>
+
+  </body>
+</html>
